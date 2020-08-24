@@ -1,0 +1,615 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 420px;
+    scroll-snap-align: start;
+}
+
+.gambar {
+    width: 100%;
+}
+
+
+
+
+/* utility */
+.tombol {
+    background-color: rgb(19, 229, 236);
+    color: rgb(41, 41, 41);
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    animation: zoominout 3s infinite;
+}
+
+@keyframes zoominout {
+    0% {
+        transform: scale(1.1);
+        color: rgb(150, 150, 150);
+    }
+    50% {
+        transform: scale(1);
+        color: black;
+    }
+    100% {
+        transform: scale(1.1);
+        color: rgb(150, 147, 147);
+    }
+}
+
+
+
+
+/* Navbar */
+.navbar-brand {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 32px;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    color: black;
+    font-size: 15px;
+    margin-right: 5px;
+    font-weight: bold;
+    transition: all 0.5s;
+    height: 100%;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.151);
+    border-radius: 5px;
+}
+
+
+/* slider */
+.slider1 {
+    background-color: rgb(194, 56, 56);
+}
+
+.slider2 {
+    background-color: rgb(96, 89, 196);
+}
+
+.slider3 {
+    background-color: rgb(228, 110, 32);
+}
+
+.caption-slider h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.caption-slider h3 {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.caption-slider {
+    animation: caption-slider 3s ease-in;
+}
+
+@keyframes caption-slider {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slider1,
+.slider2,
+.slider3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    height: 500px;
+}
+
+.image-slider {
+    animation: image-slider 2s ease-in;
+}
+
+@keyframes image-slider {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* info panel */
+.info-panel {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 30px;
+ }
+ 
+ .info-panel img {
+     width: 80px;
+     height: 80px;
+     margin-right: 20px;
+     margin-bottom: 20px;
+ }
+ 
+ .info-panel h4 {
+     font-size: 16px;
+     text-transform: uppercase;
+     font-weight: bold;
+     margin: 5px;
+ }
+ 
+ .info-panel p {
+     font-size: 14px;
+     color: #acacac;
+     font-weight: 500;
+ 
+ }
+
+ .product {
+     margin-top: -350px;
+     padding-top: 450px;
+ }
+
+ .card-title {
+     font-size: 20px;
+ }
+
+ .tombol-harga {
+     margin: 5px 0 2px 0;
+     display: flex;
+     justify-content: space-around;
+     align-items: baseline;
+     height: 20px;
+     text-align: justify;
+ }
+
+ .tombol-harga a {
+     font-size:15px;
+ }
+
+ .list-harga {
+     display: flex;
+     flex-direction: column;
+     font-size: 17px;
+     font-weight: 700;
+}
+
+.list-harga span:nth-child(1) {
+    font-size: 1.7em;
+    animation: harga 2s infinite;
+    color: red;
+}
+
+@keyframes harga {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+
+.list-harga span:nth-child(2) {
+    color: rgb(131, 131, 131);
+    text-decoration: line-through;
+}
+
+
+/* card-produk */
+.card-produk {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 100%;
+    margin-bottom: 20px;
+    animation: 3s;
+}
+
+
+.card img {
+    cursor: pointer;
+}
+
+
+/* Tentang */
+
+.tentang {
+    padding-top: 130px;
+    background-image:url(assets/img/back2.jpg) ;
+    background-size: cover;
+    background-position: center;
+}
+
+.tentang-caption{
+    text-align: justify;
+    align-items: center;
+    width: 50%;
+    padding-right: 20px;
+}
+
+.tentang-image img {
+    padding: 10px;
+}
+
+.gambar {
+    border-radius: 100px 20px 100px 20px;
+}
+
+.latar {
+    background-color: #dddcdc8a;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+
+.performance {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.terkirim {
+    width: 50%;
+}
+
+.terkirim h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.counter {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.caption-tentang {
+    padding: 10px 10px 10px 10px;
+    top: 50%;
+    text-align: justify;
+    color: azure;
+}
+
+.caption-tentang h3 {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.caption-tentang p {
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    line-height: 2.1;
+}
+
+
+
+#testimoni {
+    padding: 120px 0 0 30px;
+    color:rgb(44, 44, 44);
+    background-color: rgb(235, 235, 235);
+}
+
+#promo {
+    background-image: url(assets/img/back3.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 70px 0;
+}
+
+
+.info-promo {
+    border: 1px solid #dfdbdb;
+    background-color: #f8f8f8;
+    border-radius: 30px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.6);
+    padding: 10px;
+}
+
+
+
+.promo-jam {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.promo-jam span {
+    content: " ";
+    display: block;
+    border: 1px;
+    border-radius: 10%;
+    width: 50px;
+    margin: 0 10px;
+    height:50px;
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 3px 20px rgba(255, 136, 0, 0.5);
+    color: #dfdbdb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.waktu {
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.promo-jam span h1 {
+    height: 20%;
+    font-size: 10px;
+    font-weight: bold;
+    color: #dfdbdb;
+}
+
+
+.header-promo h1 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.body-promo h5{
+    font-size: 16px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+.body-promo h5 span{
+    font-weight: bold;
+}
+
+
+footer {
+    min-height:90px ;
+    align-content: center;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    padding-top: 40px;
+}
+
+footer h4 {
+    font-size: 20px;
+}
+
+
+
+
+@media (min-width: 768px) {
+    .card {
+        width: 45%;
+    }
+    .glide__slide .card {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+ @media (min-width: 992px) { 
+
+    .caption-slider h1 {
+        color: white;
+        font-weight: bold;
+        font-size: 40px;
+    }
+    
+    .caption-slider h3 {
+        color: white;
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    .info-panel {
+        margin-top: -20px;
+    }
+    
+    .product {
+        margin-top: -138px;
+        padding-top: 200px;
+    }
+
+    .card {
+        width: 24%;
+    }
+
+    .tombol {
+        background-color: rgb(19, 229, 236);
+        color: rgb(41, 41, 41);
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 25px;
+    }
+
+    .tombol:hover {
+        animation-name: zoominout;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes zoominout {
+        0% {
+            transform: scale(1.1);
+            color: white;
+        }
+        50% {
+            transform: scale(1);
+            color: black;
+        }
+        100% {
+            transform: scale(1.1);
+            color: white;
+        }
+    }
+
+    .nav-link:hover {
+        background-color: rgba(0, 0, 0, 0.151);
+        border-radius: 5px;
+        transform: scale(1.1);
+    }
+
+    .product {
+        margin-top: -135px
+    }
+
+    .title-product h1 {
+        font-weight: bold;
+        font-size: 45px;
+    }
+
+    .menu-product a {
+        color: white;
+        margin-right: 10px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    #tentang {
+        padding-top: 120px;
+    }
+
+    .caption-tentang {
+        padding: 90px 10px 10px 10px;
+        top: 50%;
+        text-align: justify;
+        color: azure;
+    }
+
+    .caption-tentang p {
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        line-height: 1.9;
+    }
+
+    .terkirim {
+        width: 25%;
+    }
+
+
+    #testimoni {
+        padding-top: 120px;
+        color: black;
+        background-color: rgb(226, 226, 226);
+    }
+
+    .glide__slide .card {
+        width: 100%;
+    }
+
+    .promo1 {
+        background-color: rgb(255, 166, 0);
+    }
+
+    .promo-image {
+        width: 50%;
+        padding: 10%;
+        align-items: center;
+    }
+    
+    .promo2 {
+        background-color: rgb(255, 8, 0);
+    }
+
+
+    .info-promo {
+        border: 1px solid #dfdbdb;
+        background-color: #f8f8f8;
+        border-radius: 30px;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.6);
+        padding: 30px;
+    }
+
+    .promo-jam {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .promo-jam span {
+        content: " ";
+        display: block;
+        border: 1px;
+        border-radius: 10%;
+        width: 70px;
+        margin: 0 20px;
+        height:70px;
+        background-color: rgb(255, 0, 0);
+        box-shadow: 0 3px 20px rgba(255, 136, 0, 0.5);
+        color: #dfdbdb;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .waktu {
+        font-size: 20px;
+        font-weight: bold;
+    
+    }
+    
+    .promo-jam span h1 {
+        height: 20%;
+        font-size: 16px;
+        font-weight: bold;
+        color: #dfdbdb;
+    }
+
+    .header-promo h1 {
+        font-weight: bold;
+        font-size: 34px;
+    }
+
+    
+    .body-promo h5{
+        font-size: 20px;
+        margin: 10px auto;
+        line-height: 1.6;
+    }
+
+
+    
+
+
+ }
